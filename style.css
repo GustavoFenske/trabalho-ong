@@ -1,3 +1,12 @@
+header{
+    display: flex;
+    justify-content: center;
+}
+main{
+    margin: bottom;
+    text-align: center;
+}
+
 #logo_site{
     width: 200px;
     height: 100px;
