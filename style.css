@@ -2,14 +2,19 @@ header{
     display: flex;
     justify-content: center;
     gap: 100px;
+    background-color: rgb(230, 252, 109);
 }
 main{
     display: flex;
     flex-direction: column;
     margin: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
     text-align: center;
     background-color: rgb(231, 230, 143);
     border-radius: 8px;
+    padding: 10px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #logo_site{
@@ -17,7 +22,13 @@ main{
     height: 100px;
 }
 
-.formAdoção{
-    align-items: center;
-    
+body{
+    background-image: url(assets/wallpaper\ site.jpg)
+}
+
+#cachorrocanto{
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    bottom: 2px;
 }
