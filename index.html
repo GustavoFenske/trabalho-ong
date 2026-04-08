@@ -17,10 +17,10 @@
 
 
 
-<main>
-    
-    <div class="formulario"></div>
-    
+    <main>
+
+        <div class="formulario"></div>
+
         <form id="formAdoção">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" placeholder="Digite seu nome">
@@ -30,6 +30,9 @@
             <br>
             <label for="telefone">Telefone:</label>
             <input type="text" id="telefone" placeholder="Digite o seu telefone">
+            <br>
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" placeholder="Digite a sua cidade">
             <br>
             <label for="moradia">Moradia: </label>
             <select name="moradia" id="moradia">
@@ -42,6 +45,18 @@
             <input type="radio" name="quintal" value="sim">Sim
             <input type="radio" name="quintal" value="nao">Não
             <br>
+            <label for="pets">Já teve pets antes</label>
+            <input type="radio" name="quintal" value="sim">Sim
+            <input type="radio" name="quintal" value="nao">Não
+            <br>
+            <label for="horas">Quantas horas o animal ficara sozinho?</label>
+            <input type="text" id="horas" placeholder="Quantas horas?">
+            <br>
+            <label for="horas">Quantas horas o animal ficara sozinho?</label>
+            <input type="text" id="horas" placeholder="Quantas horas?">
+            <br>
+            <input type="checkbox" id="termo">   
+            <label for="termo">Clique aqui para aceitar os termos</label><br>
             <button type="submit">Enviar</button>
             <br>
 
@@ -51,7 +66,7 @@
 
 
         </form>
-</main>
+    </main>
 
 
     <div id="resultado"></div>
