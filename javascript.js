@@ -14,6 +14,8 @@ document.getElementById("formAdoção").addEventListener("submit", function (e) 
     let horas = document.getElementById("horas").value;
     let motivo = document.getElementById("horas").value;
     let termo = document.getElementById("termo").checked;
+    let financeiro = document.getElementById("financeiro").value;
+    let decisao = document.querySelector('input[name="decisao"]:checked');
 
 
     let cpfexistente = "123.456.678-90";
@@ -71,6 +73,15 @@ document.getElementById("formAdoção").addEventListener("submit", function (e) 
         return alert("Por favor descreva melhor o motivo da adoção");
     }
 
+    if (financeiro === "nao") {
+        return alert("E necessário ter condições financeiras");
+    } else if (financeiro === "") {
+        return alert("Por favor, informe sua situação financeira.");
+    }
+
+    if (decisao && decisao.value === "hoje") {
+        alert("Você nao pode adotar no mesmo dia");
+    }
     document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso!<br>" + "Nome: " + nome;
 
 

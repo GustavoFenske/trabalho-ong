@@ -73,11 +73,26 @@
             <label for="horas">Quantas horas o animal ficara sozinho?</label>
             <input type="text" id="horas" placeholder="Quantas horas?">
             <br>
+            <br>
 
+
+            <label for="financeiro">Possui condições financeiras para os custos do pet?</label>
+            <select id="financeiro">
+                <option value="">Selecione</option>
+                <option value="sim">sim</option>
+                <option value="nao">não</option>
+            </select>
+            <br><br>
+
+            <label>Quando decidiu adotar?</label><br>
+            <input type="radio" name="decisao" value="hoje"> Decidi hoje mesmo
+            <input type="radio" name="decisao" value="tempo"> Já venho planejando há tempo
+
+
+            <br><br>
             <label for="motivo"><STRONG>Motivo da adoção </STRONG></label>
             <br>
-            <textarea id="motivo" rows="10" cols="50"
-                placeholder="Motivo da adoção"></textarea>
+            <textarea id="motivo" rows="10" cols="50" placeholder="Motivo da adoção"></textarea>
             <br>
 
             <br>
@@ -85,7 +100,6 @@
             <label for="termo">Clique aqui para aceitar os termos</label><br>
             <button type="submit">Enviar</button>
             <br>
-
 
 
             <div id="resultado"></div>
