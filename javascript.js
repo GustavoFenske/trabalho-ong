@@ -15,7 +15,7 @@ document.getElementById("formAdoção").addEventListener("submit", function (e) 
     let motivo = document.getElementById("horas").value;
 
 
-
+    let cpfexistente = "123.456.678-90";
 
     if (nome.length < 3) return alert("Nome Inválido");
 
@@ -29,17 +29,30 @@ document.getElementById("formAdoção").addEventListener("submit", function (e) 
 
     if (cpf.length <= 0) return alert("digite o seu cpf");
 
+    if (cpf === cpfExistente) return alert("esse cpf ja adotou antes");
+
     if (idade < 18) return alert("é necessário ser maior de idade");
 
     if (cidade.length <= 0) return alert("digite a sua cidade");
 
     if (moradia == false) return alert("escolha sua moradiaaz");
 
+    if (moradia == "Apartamento") {
+        let resposta_moradia = prompt("O apartamento aceita pets? (responda com sim ou não)");
+
+        if (resposta_moradia == "não") {
+            alert("Desculpe, mas só aceitamos apartamentos que aceitam pets!");
+            document.getElementById("moradia").value = "selecione";
+        }
+    }
+
     if (!quintal) return alert("assinale a opção do quintal");
 
     if (!pets) return alert("assinale a opção do pets");
 
-    if (horas < 0 || horas > 24) return alert ("digite horas validas");
+    if (horas < 0 || horas > 24) return alert("digite horas validas");
+
+    if (horas > 8) return alert("O animal não pode ficar sozinho por mais de 8 horas");
 
     document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso!<br>" + "Nome: " + nome;
 
