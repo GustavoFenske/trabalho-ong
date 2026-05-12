@@ -13,6 +13,7 @@ document.getElementById("formAdoção").addEventListener("submit", function (e) 
     let pets = document.querySelector('input[name="pets"]:checked');
     let horas = document.getElementById("horas").value;
     let motivo = document.getElementById("horas").value;
+    let termo = document.getElementById("termo").checked;
 
 
     let cpfexistente = "123.456.678-90";
@@ -37,6 +38,12 @@ document.getElementById("formAdoção").addEventListener("submit", function (e) 
 
     if (moradia == false) return alert("escolha sua moradiaaz");
 
+    if (moradia == "apartamento") {
+        if (quintal.value == "sim") {
+            return alert("Apartamento não tem quintal");
+        }
+    }
+
     if (moradia == "Apartamento") {
         let resposta_moradia = prompt("O apartamento aceita pets? (responda com sim ou não)");
 
@@ -50,9 +57,19 @@ document.getElementById("formAdoção").addEventListener("submit", function (e) 
 
     if (!pets) return alert("assinale a opção do pets");
 
+    if (pets.value == "nao") {
+        alert("Como este é seu primeiro pet, a ONG entrará em contato para oferecer acompanhamento especializado.");
+    }
+
     if (horas < 0 || horas > 24) return alert("digite horas validas");
 
     if (horas > 8) return alert("O animal não pode ficar sozinho por mais de 8 horas");
+
+    if (!termo) return alert("Você precisa aceitar os termos de responsabilidade para continuar.");
+
+    if (motivo.length < 15 || motivo == "quero" || motivo == "porque sim") {
+        return alert("Por favor descreva melhor o motivo da adoção");
+    }
 
     document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso!<br>" + "Nome: " + nome;
 
